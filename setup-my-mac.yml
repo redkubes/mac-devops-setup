@@ -1,9 +1,9 @@
 ---
-- hosts: all
+- hosts: localhost
   connection: local
 
   vars_files:
-    - default.config.yml
+    - config.yml
 
   vars_prompt:
     - name: "mas_email"
