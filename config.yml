@@ -87,6 +87,7 @@ homebrew_installed_packages:
 - stern
 - terraform
 - tree
+- tmux
 - watch
 - wget
 - yarn
