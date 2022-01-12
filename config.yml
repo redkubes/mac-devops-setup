@@ -58,6 +58,7 @@ homebrew_installed_packages:
 - kompose
 - kops
 - kubernetes-cli
+- kube-ps1
 - kubeval
 - kustomize
 - minikube
