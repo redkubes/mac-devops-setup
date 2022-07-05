@@ -32,8 +32,6 @@ homebrew_installed_packages:
 - curl
 - curl-openssl
 - dive
-- docker
-- docker-compose
 - eksctl
 - gawk
 - gettext
@@ -102,6 +100,7 @@ homebrew_taps:
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - alfred
+  - docker
   - dropbox # Client for the Dropbox cloud storage service
   - firefox
   - google-chrome
