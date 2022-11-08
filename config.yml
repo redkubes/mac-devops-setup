@@ -17,85 +17,85 @@ dotfiles_files:
   - .functions
 
 homebrew_installed_packages:
-# Dev
-- act
-- ansible
-- autoconf
-- automake
-- aws-iam-authenticator
-- azure-cli
-- bash
-- bash-completion@2
-- bats
-- ca-certificates
-- coreutils
-- curl
-- curl-openssl
-- dive
-- eksctl
-- gawk
-- gettext
-- gh
-- git
-- git-secret
-- gnu-getopt
-- gnupg
-- gnutls
-- go
-- hashicorp/tap/terraform
-- hashicorp/tap/vault
-- helm
-- helmfile
-- hey
-- httperf
-- istioctl
-- jpeg
-- jq
-- k9s
-- kind
-- kompose
-- kops
-- kubernetes-cli
-- kube-ps1
-- kubeval
-- kustomize
-- minikube
-- mas
-- moreutils
-- mpdecimal
-- nmap
-- node
-- nvm
-- octant
-- openapi-generator
-- openjdk
-- openldap
-- openssl@1.1
-- php
-- pkg-config
-- podman
-- python@3.10
-- python@3.8
-- python@3.9
-- qemu
-- readline
-- ruby
-- shellcheck
-- sops
-- sqlite
-- stern
-- terraform
-- tree
-- tmux
-- watch
-- wget
-- yarn
-- yq
-- zsh
-  
+  # Dev
+  - act
+  - ansible
+  - autoconf
+  - automake
+  - aws-iam-authenticator
+  - azure-cli
+  - bash
+  - bash-completion@2
+  - bats
+  - ca-certificates
+  - coreutils
+  - curl
+  - curl-openssl
+  - dive
+  - eksctl
+  - gawk
+  - gettext
+  - gh
+  - git
+  - git-secret
+  - gnu-getopt
+  - gnupg
+  - gnutls
+  - go
+  - hashicorp/tap/terraform
+  - hashicorp/tap/vault
+  - helm
+  - helmfile
+  - hey
+  - httperf
+  - istioctl
+  - jpeg
+  - jq
+  - k9s
+  - kind
+  - kompose
+  - kops
+  - kubernetes-cli
+  - kube-ps1
+  - kubeval
+  - kustomize
+  - minikube
+  - mas
+  - moreutils
+  - mpdecimal
+  - nmap
+  - node
+  - nvm
+  - octant
+  - openapi-generator
+  - openjdk
+  - openldap
+  - openssl@1.1
+  - php
+  - pkg-config
+  - podman
+  - python@3.10
+  - python@3.8
+  - python@3.9
+  - qemu
+  - readline
+  - ruby
+  - shellcheck
+  - sops
+  - sqlite
+  - stern
+  - terraform
+  - tree
+  - tmux
+  - watch
+  - wget
+  - yarn
+  - yq
+  - zsh
+
 homebrew_taps:
   - homebrew/core
-  - hashicorp/tap 
+  - hashicorp/tap
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -105,6 +105,7 @@ homebrew_cask_apps:
   - firefox
   - google-chrome
   - google-cloud-sdk
+  - iterm2
   - kap # Open-source screen recorder built with web technology
   - postman # Collaboration platform for API development
   - slack # Team communication and collaboration software
@@ -113,7 +114,6 @@ homebrew_cask_apps:
   - virtualbox
   - visual-studio-code
   - vlc # VLC media player
-
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_app_ids: []
