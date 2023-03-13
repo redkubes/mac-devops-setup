@@ -13,7 +13,7 @@ _Note: If some Homebrew commands fail, you might need to agree to XCode's licens
 
 For enabling some options and setup alias etc. I clone my dot files repo ( `.zshrc`,`.aliases`,`.gitignore_global`,...).
 
-Of course you can use yours changing `dotfiles_repo` variable in `default.config.yml` file.
+Of course you can use yours changing `dotfiles_repo` variable in `config.yml` file.
 
 ## 🚀 Usage
 
@@ -23,12 +23,12 @@ Just run the following command at the root of this project and enter your accoun
 ansible-playbook setup-my-mac.yml -i inventory -K
 ```
 
-You can customize setup editing `default.config.yml` config file.
+You can customize setup editing `config.yml` config file.
 
 
 ## ✨What this playbook do
 
-The complete list of softwares installed is in `default.config.yml` , but in summary here what the playbook do.
+The complete list of softwares installed is in `config.yml` , but in summary here what the playbook do.
 
 - Install homebrew and cask and install applications, utilities and quick look plugins. 
 
