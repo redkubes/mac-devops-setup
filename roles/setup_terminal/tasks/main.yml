@@ -5,6 +5,7 @@
     state: present
   with_items:
     - zsh
+  tags: terminal
 
 - name: Installing oh-my-zsh
   git:
@@ -12,3 +13,4 @@
     dest: "~/.oh-my-zsh"
     update: yes
   when: install_oh_my_zsh
+  tags: terminal
