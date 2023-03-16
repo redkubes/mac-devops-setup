@@ -1,7 +1,7 @@
 ---
 configure_terminal: yes
 configure_osx: no
-configure_dotfiles: no
+configure_dotfiles: yes
 
 dotfiles_repo: ''
 dotfiles_repo_accept_hostkey: yes
