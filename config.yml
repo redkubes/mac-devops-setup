@@ -14,6 +14,7 @@ dotfiles_files:
   - .osx
   - .functions
   - .iterm2_shell_integration.zsh
+  - .inputrc
 
 homebrew_installed_packages:
   # Dev
