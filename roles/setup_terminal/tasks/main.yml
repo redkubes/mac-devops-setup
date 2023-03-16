@@ -1,10 +1,4 @@
 ---
-- name: Check if iterm2 is installed
-  homebrew_cask:
-    name: "iterm2"
-    state: present
-    install_options: "appdir={{ homebrew_cask_appdir }}"
-
 - name: Installing zsh package
   homebrew:
     name: "{{ item }}"

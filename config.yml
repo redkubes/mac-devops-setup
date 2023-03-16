@@ -10,7 +10,6 @@ dotfiles_files:
   - .aliases
   - .zshrc
   - .gitconfig
-  - .gitignore_global
   - .vimrc
   - .vim
   - .osx
