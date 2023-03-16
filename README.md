@@ -6,15 +6,6 @@ This ansible playbook install and setup most of softwares and utilities for my D
 
 First of all clone or download this repository on you mac.
 
-After that you need to do some things to install prerequisites.
-You can simply run the [install.sh](install.sh) script which includes all commands for the installation prerequisites.
-
-_Note: If some Homebrew commands fail, you might need to agree to XCode's license or fix some other Brew issue. Run brew doctor to see if this is the case._
-
-For enabling some options and setup alias etc. I clone my dot files repo ( `.zshrc`,`.aliases`,`.gitignore_global`,...).
-
-Of course you can use yours changing `dotfiles_repo` variable in `config.yml` file.
-
 ## 🚀 Usage
 
 Just run the following command at the root of this project and enter your account password when prompted.
@@ -35,8 +26,6 @@ The complete list of softwares installed is in `config.yml` , but in summary her
     Docker, Vagrant, slack, 1password, postman,...
 
 - Clone my dotfile from github repository.
-
-- Install mas (Mac App Store command line interface)
 
 - Configure terminal
 
