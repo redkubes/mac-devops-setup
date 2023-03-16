@@ -26,7 +26,6 @@ homebrew_installed_packages:
   - azure-cli
   - bash
   - bash-completion@2
-  - bats
   - ca-certificates
   - coreutils
   - curl
