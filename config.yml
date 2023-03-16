@@ -13,6 +13,7 @@ dotfiles_files:
   - .vimrc
   - .osx
   - .functions
+  - .iterm2_shell_integration.zsh
 
 homebrew_installed_packages:
   # Dev
