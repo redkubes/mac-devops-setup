@@ -3,7 +3,7 @@ configure_terminal: yes
 configure_osx: no
 configure_dotfiles: yes
 
-dotfiles_repo: github.com:j-zimnowoda/dotfiles.git
+dotfiles_repo: "https://github.com/j-zimnowoda/dotfiles.git"
 dotfiles_repo_accept_hostkey: yes
 dotfiles_repo_local_destination: ~/dotfiles
 dotfiles_files:
