@@ -1,6 +1,6 @@
 ---
 configure_terminal: yes
-configure_osx: no
+configure_osx: yes
 configure_dotfiles: yes
 
 dotfiles_repo: "https://github.com/j-zimnowoda/dotfiles.git"
@@ -114,5 +114,3 @@ homebrew_cask_apps:
   - visual-studio-code
   - vlc # VLC media player
 
-# See `geerlingguy.mas` role documentation for usage instructions.
-mas_installed_app_ids: []
