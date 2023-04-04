@@ -31,6 +31,7 @@ homebrew_installed_packages:
   - curl
   - curl-openssl
   - dive
+  - doctl
   - eksctl
   - gawk
   - gettext
@@ -72,6 +73,7 @@ homebrew_installed_packages:
   - openldap
   - openssl@1.1
   - php
+  - pinentry-mac
   - pkg-config
   - podman
   - python@3.10
