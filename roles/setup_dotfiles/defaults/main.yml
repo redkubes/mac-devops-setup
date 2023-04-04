@@ -13,3 +13,5 @@ dotfiles_files:
   - .vim
   - .osx
   - .functions
+  - .vscode/
+  - .gnupg/
