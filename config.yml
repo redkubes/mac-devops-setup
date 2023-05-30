@@ -82,6 +82,7 @@ homebrew_installed_packages:
   - qemu
   - readline
   - ruby
+  - scw
   - shellcheck
   - skaffold
   - sops
