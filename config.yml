@@ -29,7 +29,6 @@ homebrew_installed_packages:
   - ca-certificates
   - coreutils
   - curl
-  - curl-openssl
   - dive
   - doctl
   - eksctl
@@ -47,7 +46,7 @@ homebrew_installed_packages:
   - hashicorp/tap/vault
   - helm
   - helmfile
-  - hey
+  - homebrew/cask/hey
   - httperf
   - istioctl
   - jpeg
@@ -58,7 +57,7 @@ homebrew_installed_packages:
   - kops
   - kubernetes-cli
   - kube-ps1
-  - kubeval
+  - kubeconform
   - kustomize
   - minikube
   - mas
@@ -67,7 +66,6 @@ homebrew_installed_packages:
   - nmap
   - node
   - nvm
-  - octant
   - openapi-generator
   - openjdk
   - openldap
@@ -98,7 +96,6 @@ homebrew_installed_packages:
   - zsh
 
 homebrew_taps:
-  - homebrew/core
   - hashicorp/tap
 
 homebrew_cask_appdir: /Applications
