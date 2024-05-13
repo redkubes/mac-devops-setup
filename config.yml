@@ -57,7 +57,7 @@ homebrew_installed_packages:
   - kops
   - kubernetes-cli
   - kube-ps1
-  - kubeval
+  - kubeconform
   - kustomize
   - minikube
   - mas
@@ -107,6 +107,7 @@ homebrew_cask_apps:
   - firefox
   - google-chrome
   - google-cloud-sdk
+  - hey
   - iterm2
   - kap # Open-source screen recorder built with web technology
   - postman # Collaboration platform for API development
