@@ -1,0 +1,27 @@
+---
+- name: Check if Go is installed
+  command: go version
+  register: go_installed
+  ignore_errors: true
+
+- name: Install Go
+  homebrew:
+    name: go
+    state: latest
+  when: go_installed is failed
+
+- name: Get the latest release of gucci
+  uri:
+    url: https://api.github.com/repos/noqcks/gucci/releases/latest
+    return_content: yes
+  register: json
+
+- name: Download gucci
+  get_url:
+    url: "https://github.com/noqcks/gucci/releases/download/{{ json.json.tag_name }}/gucci-v{{ json.json.tag_name.split('v')[1] }}-darwin-amd64"
+    dest: "/tmp/gucci"
+    mode: '0755'
+
+- name: Move gucci to /usr/local/bin
+  command: mv /tmp/gucci /usr/local/bin/gucci
+  become: true
