@@ -10,6 +10,14 @@
     state: latest
   when: go_installed is failed
 
+- name: Install konstraint
+  command: go install github.com/plexsystems/konstraint@latest
+  environment:
+    GO111MODULE: "on"
+    GOPATH: "{{ ansible_env.HOME }}/go"
+    PATH: "{{ ansible_env.PATH }}:{{ ansible_env.HOME }}/go/bin"
+  when: go_installed is not failed
+
 - name: Get the latest release of gucci
   uri:
     url: https://api.github.com/repos/noqcks/gucci/releases/latest
