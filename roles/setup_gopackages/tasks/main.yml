@@ -30,18 +30,6 @@
     dest: "/tmp/gucci"
     mode: '0755'
 
-- name: Check if gucci is installed
-  command: gucci --version
-  register: gucci_installed
-  ignore_errors: true
-
-- name: Confirm gucci replacement with the user
-  pause:
-    prompt: "Gucci v{{ gucci_installed.stdout.split(' ')[2] }} already exists in /usr/local/bin. Do you want to replace it with {{ json.json.tag_name }}? (yes/no)"
-  register: confirm_replace
-  when: gucci_installed is not failed
-
 - name: Move gucci to /usr/local/bin
   command: mv /tmp/gucci /usr/local/bin/gucci
   become: true
-  when: gucci_installed is failed or (confirm_replace is defined and confirm_replace.user_input | lower == 'yes')
