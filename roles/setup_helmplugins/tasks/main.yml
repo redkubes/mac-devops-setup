@@ -1,0 +1,17 @@
+---
+# Retrieve list of installed Helm plugins
+- name: List installed helm plugins
+  command: helm plugin list
+  register: helm_plugins
+  ignore_errors: true
+  when: helm_installed is not failed
+
+# Install helm-diff plugin if not already installed
+- name: Install helm diff
+  command: helm plugin install https://github.com/databus23/helm-diff
+  when: helm_installed is not failed and ('diff' not in helm_plugins.stdout)
+
+# Install helm-secrets plugin if not already installed
+- name: Install helm secrets
+  command: helm plugin install https://github.com/futuresimple/helm-secrets
+  when: helm_installed is not failed and ('secrets' not in helm_plugins.stdout)
