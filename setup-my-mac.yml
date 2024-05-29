@@ -13,6 +13,9 @@
       when: configure_terminal
     - role: setup_macos
       when: configure_osx
+    - role: setup_helmplugins
+      tags: setup_helmplugins
+    - role: setup_npmpackages
+      tags: setup_npmpackages
     - role: setup_gopackages
       tags: setup_gopackages
-

@@ -1,0 +1,9 @@
+---
+- name: Check if json-dereference-cli is installed
+  command: npm list -g
+  register: npm_package
+  ignore_errors: true
+
+- name: Install json-dereference-cli globally
+  command: npm install -g json-dereference-cli
+  when: "'json-dereference-cli@' not in npm_package.stdout"
