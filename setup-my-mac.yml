@@ -17,3 +17,5 @@
       tags: setup_helmplugins
     - role: setup_npmpackages
       tags: setup_npmpackages
+    - role: setup_gopackages
+      tags: setup_gopackages
