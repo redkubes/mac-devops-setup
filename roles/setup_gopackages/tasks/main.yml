@@ -1,4 +1,11 @@
 ---
+- name: Set environment variables
+  set_fact:
+    go_env:
+      GO111MODULE: "on"
+      GOPATH: "{{ ansible_env.HOME }}/go"
+      PATH: "{{ ansible_env.PATH }}:{{ ansible_env.HOME }}/go/bin"
+
 - name: Check if Go is installed
   command: go version
   register: go_installed
@@ -12,24 +19,10 @@
 
 - name: Install konstraint
   command: go install github.com/plexsystems/konstraint@latest
-  environment:
-    GO111MODULE: "on"
-    GOPATH: "{{ ansible_env.HOME }}/go"
-    PATH: "{{ ansible_env.PATH }}:{{ ansible_env.HOME }}/go/bin"
+  environment: "{{ go_env }}"
   when: go_installed is not failed
 
-- name: Get the latest release of gucci
-  uri:
-    url: https://api.github.com/repos/noqcks/gucci/releases/latest
-    return_content: yes
-  register: json
-
-- name: Download gucci
-  get_url:
-    url: "https://github.com/noqcks/gucci/releases/download/{{ json.json.tag_name }}/gucci-{{ json.json.tag_name }}-darwin-amd64"
-    dest: "/tmp/gucci"
-    mode: '0755'
-
-- name: Move gucci to /usr/local/bin
-  command: mv /tmp/gucci /usr/local/bin/gucci
-  become: true
+- name: Install gucci
+  command: go install github.com/noqcks/gucci@latest
+  environment: "{{ go_env }}"
+  when: go_installed is not failed
