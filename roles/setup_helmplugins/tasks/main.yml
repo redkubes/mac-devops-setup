@@ -1,15 +1,4 @@
 ---
-- name: Check if helm is installed
-  command: helm version
-  register: helm_installed
-  ignore_errors: true
-
-- name: Install Helm
-  homebrew:
-    name: helm
-    state: latest
-  when: helm_installed is failed
-
 # Retrieve list of installed Helm plugins
 - name: List installed helm plugins
   command: helm plugin list
