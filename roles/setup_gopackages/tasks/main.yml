@@ -1,0 +1,28 @@
+---
+- name: Set environment variables
+  set_fact:
+    go_env:
+      GO111MODULE: "on"
+      GOPATH: "{{ ansible_env.HOME }}/go"
+      PATH: "{{ ansible_env.PATH }}:{{ ansible_env.HOME }}/go/bin"
+
+- name: Check if Go is installed
+  command: go version
+  register: go_installed
+  ignore_errors: true
+
+- name: Install Go
+  homebrew:
+    name: go
+    state: latest
+  when: go_installed is failed
+
+- name: Install konstraint
+  command: go install github.com/plexsystems/konstraint@latest
+  environment: "{{ go_env }}"
+  when: go_installed is not failed
+
+- name: Install gucci
+  command: go install github.com/noqcks/gucci@latest
+  environment: "{{ go_env }}"
+  when: go_installed is not failed

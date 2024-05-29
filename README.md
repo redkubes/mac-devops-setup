@@ -4,7 +4,7 @@ This ansible playbook install and setup most of softwares and utilities for my D
 
 ## 🚥 Installation 
 
-First of all clone or download this repository on you mac.
+First of all clone or download this repository on your mac.
 
 ## 🚀 Usage
 
@@ -39,6 +39,16 @@ The complete list of softwares installed is in `config.yml` , but in summary her
     Finder: show status bar
     Save screenshots in PNG format
     Save screenshots to the Desktop/Screenshots folder
+
+## Using Tags
+
+Tags in Ansible are a powerful feature that allow you to control the execution of your playbook at a granular level. By using tags, you can choose to run only the tasks or roles associated with certain tags.
+
+For example, if you want to run only the tasks that set up Go packages, you can use the `setup_gopackages` tag. Here's how you can do this:
+
+```sh
+ansible-playbook setup-my-mac.yml --tags setup_gopackages -K
+```
 
 ## Improvements
 
