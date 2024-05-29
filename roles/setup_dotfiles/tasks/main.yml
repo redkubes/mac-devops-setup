@@ -32,3 +32,25 @@
   become: no
   with_items: "{{ dotfiles_files }}"
   tags: dotfiles
+
+- name: Request git configurations and set them
+  block:
+    - name: Prompt for git configurations
+      pause:
+        prompt: "Please enter your {{ item.prompt }}"
+      register: user_input
+      loop:
+        - { var: 'user.signingkey', prompt: 'git signing key' }
+        - { var: 'user.name', prompt: 'git user name' }
+        - { var: 'user.email', prompt: 'git user email' }
+        - { var: 'github.user', prompt: 'GitHub username' }
+      loop_control:
+        index_var: loop_index
+
+    - name: Set git global configurations
+      git_config:
+        scope: global
+        name: "{{ item.item.var }}"
+        value: "{{ item.user_input }}"
+      loop: "{{ user_input.results }}"
+  tags: dotfiles
